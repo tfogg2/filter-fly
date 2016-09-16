@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-FilterFly::Application.load_tasks
+Filterfly::Application.load_tasks

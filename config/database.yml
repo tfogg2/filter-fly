@@ -17,9 +17,9 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: filter-fly_development
+  database: filterfly_development
   pool: 5
-  username: filter-fly
+  username: thomasfogg
   password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -46,15 +46,15 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: filter-fly_test
+  database: filterfly_test
   pool: 5
-  username: filter-fly
+  username: thomasfogg
   password:
 
 production:
   adapter: postgresql
   encoding: unicode
-  database: filter-fly_production
+  database: filterfly_production
   pool: 5
-  username: filter-fly
+  username: thomasfogg
   password:

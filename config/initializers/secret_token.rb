@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-FilterFly::Application.config.secret_key_base = '540704269ae56423b67138057db400e2a5b17e62842ee83420252dce192870bc2afdfedb656d37272e0f14b599232b1cf764bafc604c5483ffc20779a91640d2'
+Filterfly::Application.config.secret_key_base = '540704269ae56423b67138057db400e2a5b17e62842ee83420252dce192870bc2afdfedb656d37272e0f14b599232b1cf764bafc604c5483ffc20779a91640d2'

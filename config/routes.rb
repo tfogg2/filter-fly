@@ -1,4 +1,4 @@
-FilterFly::Application.routes.draw do
+Filterfly::Application.routes.draw do
   
 
   root :to => 'home#index'
