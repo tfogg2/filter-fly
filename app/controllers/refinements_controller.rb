@@ -1,0 +1,2 @@
+class RefinementsController < ApplicationController
+end

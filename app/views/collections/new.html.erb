@@ -1,0 +1,7 @@
+<%= form_for @collection, url: {action: "create"} do |f| %>
+	<%= f.label "Title" %>
+  <%= f.text_field :title %></br></br>
+  <%= f.label "Tag" %>
+  <%= f.text_field :tag %></br></br>
+  <%= f.submit "Create" %>
+<% end %>
