@@ -1,2 +1,3 @@
-class Collection < ActiveRecord::Base
+class Collection < Refinement
+	has_many :filters
 end

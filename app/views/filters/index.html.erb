@@ -1,0 +1,6 @@
+<h1> Filters </h1>
+
+<% @filters.each do |filter| %>
+	<h3><%= filter.name %></h3>
+	<p><%= link_to "Filter Tag", filter_path(filter) %></p>  
+<% end %>

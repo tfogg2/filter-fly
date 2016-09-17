@@ -1,3 +1,31 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 var $filter = document.getElementById('filter');
 	$filter.append($newFilter)
 	$filter.append($tagSearch)
@@ -13,3 +41,4 @@ var $newFilter = $('<button class="newFilter"></button>');
 
 
 	}));
+	*/

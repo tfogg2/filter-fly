@@ -1,8 +1,7 @@
 Filterfly::Application.routes.draw do
   
 
-  root :to => 'home#index'
-  get 'filter' => 'main#filter' 
+
 
 
   controller :sessions do
@@ -12,6 +11,9 @@ Filterfly::Application.routes.draw do
     get 'logout' => :destroy, :as => :logout
   end
 
+
+  resources :filters 
+  resources :collections 
 
   
   # The priority is based upon order of creation: first created -> highest priority.

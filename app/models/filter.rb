@@ -1,2 +1,4 @@
-class Filter < ActiveRecord::Base
+class Filter < Refinement
+	belongs_to :collection
+	
 end
