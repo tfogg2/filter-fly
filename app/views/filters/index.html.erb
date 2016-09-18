@@ -1,9 +1,14 @@
 <h1> Filters </h1>
 
+<h2><%= link_to "New Filter", new_filter_path %></h2>
+<h2><%= link_to "Collections", collections_path %></h2>
+
 <% @filters.each do |filter| %>
 	<h3><%= filter.name %></h3>
 	<p><%= link_to "Filter Tag", filter_path(filter) %></p>  
+	<%# link_to 'Edit', edit_filter_path(filter) %>
+    <%= link_to 'Delete', filter, method: :delete, data: { confirm: 'Are you sure?' } %>
 <% end %>
 
-<%= link_to "New Filter", new_filter_path %>
+
 

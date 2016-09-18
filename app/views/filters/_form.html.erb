@@ -1,0 +1,25 @@
+<div class="col-md-4 form-horizontal well">
+  <%= simple_form_for(@filter, html: {class: "form-horizontal"}, multipart: true ) do |f| %>
+    <% if @filter.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@filter.errors.count, "error") %> prohibited this filter from being saved:</h2>
+
+        <ul>
+        <% @filter.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <div class="sup">
+      
+      <%= f.input :content %>
+      
+
+    </div>
+    <div class="form-action">
+     <%= f.button :submit %>
+    </div>
+    
+  <% end %>
+</div>

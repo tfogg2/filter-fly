@@ -1,7 +1,7 @@
-<%= form_for @collection, url: {action: "create"} do |f| %>
+<%= simple_form_for @collection, url: {action: "create"} do |f| %>
 	<%= f.label "Title" %>
-  <%= f.text_field :title %></br></br>
+  <%= f.input :title %></br></br>
   <%= f.label "Tag" %>
-  <%= f.text_field :tag %></br></br>
-  <%= f.submit "Create" %>
+  <%= f.input :tag %></br></br>
+  <%= f.button :submit %>
 <% end %>

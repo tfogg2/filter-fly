@@ -25,4 +25,29 @@ class CollectionsController < ApplicationController
 	def collection_params
     	params.require(:collection).permit(:title, :tag) 
   	end	
+
+  	def edit
+	    @collection = collection.find(params[:id])
+
+	    respond_to do |format|
+	      if @collection.update_attributes(collection_params) 
+
+	        format.html { redirect_to @collection, notice: 'Collection was successfully updated.' }
+	        format.json { head :no_content }
+	      else
+	        format.html { render action: 'edit' }
+	        format.json { render json: @collection.errors, status: :unprocessable_entity }
+	      end
+	   end
+  end
+
+  # DELETE /statuses/1
+  # DELETE /statuses/1.json
+  def destroy
+    @status.destroy
+	   respond_to do |format|
+	    format.html { redirect_to collections_path }
+	    format.json { head :no_content }
+	  end
+  end
 end

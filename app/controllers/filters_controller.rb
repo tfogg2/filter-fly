@@ -24,7 +24,36 @@ class FiltersController < ApplicationController
 		  end
 		end
 	end
-	def filter_params
-    	params.require(:filter).permit(:name, :tag, :collection_id) 
-  	end	
+
+  	def edit
+	    @filter = Filter.find(params[:id])
+
+	    respond_to do |format|
+	      if @filter.update_attributes(@filter_params)
+	        format.html { redirect_to @filter, notice: 'Filter was successfully updated.' }
+	        format.json { head :no_content }
+	      else
+	        format.html { render action: 'edit' }
+	        format.json { render json: @filter.errors, status: :unprocessable_entity }
+	      end
+	   	end
+  end
+
+
+  def destroy
+    @filter = Filter.find(params[:id])
+    
+    @filter.destroy
+
+	  respond_to do |format|
+	    format.html { redirect_to filters_path }
+	    format.json { head :no_content }
+	  end
+  end
+
+
+
+  def filter_params
+    params.require(:filter).permit(:name, :tag, :collection_id) 
+  end	
 end
