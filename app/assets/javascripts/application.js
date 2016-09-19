@@ -1,5 +1,3 @@
-var $a = document.getElementsByTagName('a');
-	$a
 
 
 
