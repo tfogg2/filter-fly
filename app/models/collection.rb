@@ -3,4 +3,5 @@ class Collection < Refinement
 
 	validates :title, presence: true
 	validates :tag, presence: true
+
 end

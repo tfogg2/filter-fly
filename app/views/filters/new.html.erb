@@ -1,9 +1,9 @@
-<%= form_for @filter, url: {action: "create"} do |f| %>
-	<%= f.label "Name" %>
-  <%= f.text_field :name %></br></br>
-  <%= f.label "Tag" %>
-  <%= f.text_field :tag %></br></br>
-  <%= f.label "Collection Id" %>
-  <%= f.text_field :collection_id %></br></br>
-  <%= f.submit "Create" %>
+<%= simple_form_for @filter, url: {action: "create"} do |f| %>
+  <%= f.input :name, placeholder: "Name", label: false %></br></br>
+  <%= f.input :tag , placeholder: "Product Tag", label: false %></br></br>
+  <%= f.input :collection_id, placeholder: "Collection Id", label: false  %></br></br>
+  <%= f.button :submit %>
 <% end %>
+
+</br>
+	<button class="btn ptn-primary"><%= link_to "Filters Page", filters_path %></button>

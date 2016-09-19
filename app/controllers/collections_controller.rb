@@ -44,7 +44,8 @@ class CollectionsController < ApplicationController
   # DELETE /statuses/1
   # DELETE /statuses/1.json
   def destroy
-    @status.destroy
+  	@collection = Collection.find(params[:id])
+    @collection.destroy
 	   respond_to do |format|
 	    format.html { redirect_to collections_path }
 	    format.json { head :no_content }

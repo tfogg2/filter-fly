@@ -1,0 +1,10 @@
+
+
+<%= simple_form_for @refinement, url: {action: "create"} do |f| %>
+	<% f.collection_select :type, Refinement::TYPES, :to_s, :humanize %></br></br>
+		<%= f.input :title %></br></br>
+ 		<%= f.input :name %></br></br>
+	  <%= f.input :tag %></br></br>
+	  <%= f.input :collection_id %></br></br>
+	  <%= f.button :submit %> 
+<% end %>

@@ -4,4 +4,5 @@ class Filter < Refinement
 	validates :name, presence: true
 	validates :tag, presence: true
 	
+
 end
