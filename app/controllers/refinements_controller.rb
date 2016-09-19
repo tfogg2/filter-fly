@@ -23,6 +23,8 @@ class RefinementsController < ApplicationController
 	end
 
 
+	TYPES = %w[filter collection]
+	
 	def create
 		@refinement = Refinement.create(refinement_params)
 
