@@ -1,6 +1,7 @@
 <h1><%= @collection.title %></h1>
 
 <%= @collection.tag %>
+<%= @collection.filters %>
 
-<%= link_to @collection.filters.count, filters_path %>
+<%= link_to @collection.filters, filter_path %>
 <%# @collection.filters.first.name %>

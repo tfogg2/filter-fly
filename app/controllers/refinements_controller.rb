@@ -15,7 +15,6 @@ class RefinementsController < ApplicationController
 
 	end
 
-	TYPES = %w[filter collection]
 	def is_filter?
 		type.downcase == "filter"
 	end

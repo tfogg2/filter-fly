@@ -1,5 +1,3 @@
-
-
 <%= simple_form_for @refinement, url: {action: "create"} do |f| %>
 	<% f.collection_select :type, Refinement::TYPES, :to_s, :humanize %></br></br>
 		<%= f.input :title %></br></br>
