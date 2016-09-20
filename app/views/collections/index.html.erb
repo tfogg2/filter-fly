@@ -7,7 +7,7 @@
 <% @collections.each do |collection| %>
 	<h3><%= collection.title %></h3>
 
-	<h5><%= collection.filters %></h5>
+	<h5><%= collection.filters.count %></h5>
 
 	<p><%= link_to "Collection Tag", collection_path(collection) %></p>  
 	<%= link_to 'Delete', collection, method: :delete, data: { confirm: 'Are you sure?' } %>

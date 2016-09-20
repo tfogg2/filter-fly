@@ -1,5 +1,5 @@
 <%= simple_form_for @collection, url: {action: "create"} do |f| %>
-  <%= f.input :title %></br></br>
-  <%= f.input :tag %></br></br>
+  <%= f.input :title, placeholder: "Title", label: false %></br></br>
+  <%= f.input :tag, placeholder: "Tag", label: false  %></br></br>
   <%= f.button :submit %>
 <% end %>
