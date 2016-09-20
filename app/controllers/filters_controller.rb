@@ -10,6 +10,8 @@ class FiltersController < ApplicationController
 
 	def new 
 		@filter = Filter.new
+		@collections = Collection.all
+
 	end
 	def create
 		@filter = Filter.create (filter_params)

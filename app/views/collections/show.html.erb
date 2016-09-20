@@ -3,7 +3,7 @@
 <%= @collection.tag %>
 <%# @collection.filters %>
 
-<%= link_to @collection.filters.count, filters_path %>
+<%= link_to @collection.filters.ids, filters_path %>
 <%# @collection.filters.first.name %>
 
-<button class="btn btn-primary"><%= link_to "Collections", collections_path %></button>
+<button class="btn btn-default"><%= link_to "Collections", collections_path %></button>

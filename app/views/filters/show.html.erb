@@ -8,4 +8,6 @@
 
 <%= @filter.tag %>
 <%= link_to 'Delete', @filter, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+<button class="btn btn-default"><%= link_to "Filters", filters_path %></button>
 <%# @filter.collection.title %>

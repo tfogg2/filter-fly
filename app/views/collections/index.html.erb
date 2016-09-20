@@ -1,16 +1,19 @@
 
 <h1> Collections </h1>
 
-<h2><%= link_to "New Collection", new_collection_path %></h2>
-<h2><%= link_to "Filters", filters_path %></h2>
+<button class="btn btn-default"><%= link_to "New Collection", new_collection_path %></button>
+<button class="btn btn-default"><%= link_to "Filters", filters_path %></button>
+<button class="btn btn-default btn-large"><%= link_to "All Refinements", refinements_path %></button>
+
 
 <% @collections.each do |collection| %>
-	<h3><%= collection.title %></h3>
+	<h3><%= link_to collection.title, collection_path(collection)%></h3>
 
-	<h5><%= collection.filters.count %></h5>
-
-	<p><%= link_to "Collection Tag", collection_path(collection) %></p>  
+	<h5><%= collection.filters.count %> Filters</h5>
+ 
 	<%= link_to 'Delete', collection, method: :delete, data: { confirm: 'Are you sure?' } %>
 <% end %>
+
+
 
 

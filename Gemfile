@@ -10,6 +10,8 @@ gem 'shopify_app', '6.1.0'
 
 gem 'simple_form'
 
+ruby '2.2.4'
+
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'

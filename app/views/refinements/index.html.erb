@@ -1,12 +1,22 @@
 <h1> Refinements </h1>
 
-<h2><%= link_to "New Refinement", new_refinement_path %></h2>
-<h2><%= link_to "Collections", collections_path %></h2>
-<h2><%= link_to "Filters", filters_path %></h2>
+<button class="btn btn-default"><%= link_to "New Refinement", new_refinement_path %></button>
+<button class="btn btn-default"><%= link_to "Collections", collections_path %></button>
+<button class="btn btn-default"><%= link_to "Filters", filters_path %></button>
 
 <% @refinements.each do |refinement| %>
+	
+	
+	
 	<h3><%= refinement.name %></h3>
-	<p><%= link_to "Refinement Tag", refinement_path(refinement) %></p>  
+	<h3><%= refinement.title %></h3>
+	<h3><%= refinement.type %></h3>
+
+
+
+	<p><%= link_to "Tag", refinement_path(refinement) %></p>  
 	<%# link_to 'Edit', edit_filter_path(filter) %>
     <%= link_to 'Delete', refinement, method: :delete, data: { confirm: 'Are you sure?' } %>
 <% end %>
+
+

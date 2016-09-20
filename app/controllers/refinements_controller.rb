@@ -12,6 +12,7 @@ class RefinementsController < ApplicationController
 		@refinement = Refinement.new
 		@filter = Filter.new
 		@collection = Collection.new
+		@collections = Collection.all
 
 	end
 
@@ -23,7 +24,7 @@ class RefinementsController < ApplicationController
 	end
 
 
-	TYPES = %w[filter collection]
+	Refinement::TYPES = %w[filter collection]
 	
 	def create
 		@refinement = Refinement.create(refinement_params)
@@ -53,7 +54,7 @@ class RefinementsController < ApplicationController
 
 
 	def refinement_params
-    	params.require(:refinement).permit(:name, :tag, :collection_id, :title, :type) 
+    	params.require(:refinement).permit(:name, :tag, :collection_id, :title) 
   	end	
 
 
