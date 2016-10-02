@@ -1,17 +1,13 @@
 Filterfly::Application.routes.draw do
   
 
-
-  
-
-
   controller :sessions do
     get 'login' => :new, :as => :login
     post 'login' => :create, :as => :authenticate
     get 'auth/shopify/callback' => :callback
     get 'logout' => :destroy, :as => :logout
   end
-
+  root 'refinements#index'
   get 'design' => 'refinements#design', as: :design
   get 'installation' => 'support#installation', as: :installation
   get 'support' => 'support#support', as: :support
