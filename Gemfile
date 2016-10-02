@@ -6,7 +6,6 @@ gem 'rails', '4.0.6'
 # Use postgresql as the database for Active Record
 gem 'pg'
 
-gem 'shopify_app', '6.1.0'
 
 gem 'simple_form'
 
@@ -52,3 +51,4 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
+gem 'shopify_app'
