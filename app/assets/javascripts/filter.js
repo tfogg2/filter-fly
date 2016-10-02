@@ -23,8 +23,6 @@
 
 
 
-
-
 /*
 var $filter = document.getElementById('filter');
 	$filter.append($newFilter)

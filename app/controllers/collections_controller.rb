@@ -5,6 +5,12 @@ class CollectionsController < ApplicationController
 
 	def show 
 		@collection = Collection.find(params[:id])
+		@filters = Filter.where("collection_id = id" )
+=begin
+		@filters = Filter.where("collection_id = id" ).find_each do |filter|
+			filter.name
+		end
+=end
 	end 
 	def new 
 		@collection = Collection.new

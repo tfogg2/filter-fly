@@ -4,6 +4,11 @@
 <%# @collection.filters %>
 
 <%= link_to @collection.filters.ids, filters_path %>
-<%# @collection.filters.first.name %>
+
+<%# @filter %>
+
+<%# link_to @collection.filters.first.name, filters_path %>
+
+<%= @filters %>
 
 <button class="btn btn-default"><%= link_to "Collections", collections_path %></button>

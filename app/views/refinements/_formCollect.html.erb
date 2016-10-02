@@ -1,0 +1,41 @@
+
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">New Refinement</h4>
+      </div>
+      <div class="modal-body col-md-6">
+        <div class="collectionModal">
+          <legend>New Collection</legend>
+          <%= simple_form_for @collection, url: {action: "create"} do |f| %>
+            <%= f.input :title, placeholder: "Collection title", label: false %></br></br>
+            <%= f.input :tag, placeholder: "Product group", label: false %></br></br>
+            <%= f.button :submit %> 
+          <% end %>
+        </div>
+    
+        </br>
+          
+        
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+        <%# f.collection_select :type, Refinement::TYPES, :to_s, :humanize %></br></br>
+        <%# f.collection_select :type, :to_s, :human %>

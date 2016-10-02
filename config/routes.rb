@@ -2,7 +2,7 @@ Filterfly::Application.routes.draw do
   
 
 
-
+  
 
   controller :sessions do
     get 'login' => :new, :as => :login
@@ -10,10 +10,15 @@ Filterfly::Application.routes.draw do
     get 'auth/shopify/callback' => :callback
     get 'logout' => :destroy, :as => :logout
   end
+  root 'home#index'
+  get 'design' => 'refinements#design', as: :design
+  get 'installation' => 'support#installation', as: :installation
+  get 'support' => 'support#support', as: :support
+  
 
   resources :refinements 
-  resources :filters 
-  resources :collections 
+  resources :filters #, :controller => "refinements", :type => "Filter" 
+  resources :collections #, :controller => "refinements", :type => "Collection"  
   
 
   

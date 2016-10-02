@@ -3,21 +3,38 @@
 <head>
   <title>FilterFly</title>
   <script   src="http://code.jquery.com/jquery-1.12.4.js"   integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU="   crossorigin="anonymous"></script>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= stylesheet_link_tag    "bootstrap", media: "all", "data-turbolinks-track" => true %>
+  	<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
 	<%= stylesheet_link_tag    "main", media: "all", "data-turbolinks-track" => true %>
   <%# stylesheet_link_tag    "main", media: "all", "data-turbolinks-track" => true %>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%# stylesheet_link_tag    "bootstrap", media: "all", "data-turbolinks-track" => true %>
+
   
 
  	<%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+<nav class="navbar navbar-default">
+  <div id="topBar" class="container-fluid">
+    <div class="navbar-header"><h1><%= link_to "Filter Fly", refinements_path %></h1></div>
+    <ul class="nav navbar-nav navbar-right">
+      <li><%= link_to "Filters", refinements_path %></li>
+      <li><%= link_to "Design", design_path %></li>
+      <li><%= link_to "Installation", installation_path %></li>
+      <li><%= link_to "Support", support_path %></li>
+    </ul>
+    </div>
+</nav>
 
 
+	<div class="content">
+    <%= yield %>
+  </div>
+
+
+<footer></footer>
 
 
 </body>

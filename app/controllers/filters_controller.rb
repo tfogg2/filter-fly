@@ -1,7 +1,10 @@
 class FiltersController < ApplicationController
+	
 
 	def index 
 		@filters = Filter.all
+		@filter = Filter.new
+		@collections = Collection.all
 	end 
 
 	def show 

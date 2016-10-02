@@ -5,4 +5,5 @@ class Filter < Refinement
 	validates :tag, presence: true
 	
 
+
 end

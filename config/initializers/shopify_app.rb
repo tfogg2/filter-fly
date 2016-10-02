@@ -4,4 +4,9 @@ ShopifyApp.configure do |config|
  
   config.scope = "read_orders, read_products"
   config.embedded_app = true
+  config.webhooks = [
+  	{topic: 'collections/create', address: 'http://filter-fly.herokuapp.com/webhooks/collections_create', format: 'json'}
+  	{topic: 'collections/delete', address: 'http://filter-fly.herokuapp.com/webhooks/collections_delete', format: 'json'}
+  	{topic: 'collections/update', address: 'http://filter-fly.herokuapp.com/webhooks/collections_update', format: 'json'}
+  ]
 end

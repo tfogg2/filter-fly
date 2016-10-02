@@ -1,0 +1,47 @@
+<div id="design">
+	<div id="viewFilters" class="col-md-3">
+		<div class="btn-group btn-group-vertical dropdownCollect" role="group" aria-label="dropdownFilter">
+			<% @collections.each do |collection| %>
+				<div class="dropdown btn-group" role="group">
+					<button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+		    			<%= link_to collection.title, design_path  %>
+		   	 			<span class="caret"></span>
+	  				</button>
+	  				<ul class="dropdown-menu" aria-labelledby="dropdownFilter">
+	  					<li><%= collection.filters.ids %></li>
+	  				</ul>
+	  			</div>
+			<% end %>
+		</div>
+		<%# @filters.each do |filter| %>
+			<h4><%# filter.name  %></h4>
+		<%# end %>
+	</div>
+	<div id="viewProducts" class="col-md-6 well"></div>
+	<div id="editDesign" class="col-md-3">
+		<div class="menu menu-filterPlacement">
+			<h4 class="title">Filter Placement</h4>
+			<div class="sub-menu sub-menu-filterPlacement">
+			</div>
+		</div>
+		<div class="menu menu-sortingOptions">
+			<h4 class="title">Sorting Options</h4>
+			<div class="sub-menu sub-menu-sortingOptions">
+			</div>
+		</div>
+		<div class="menu menu-products">
+			<h4 class="title">Products</h4>
+			<div class="sub-menu sub-menu-products">
+			</div>
+		</div>
+		<div class="menu menu-colorScheme">
+			<h4 class="title">Color Scheme</h4>
+			<div class="sub-menu sub-menu-colorScheme">
+			</div>
+		</div>
+
+
+
+
+	</div>
+</div>

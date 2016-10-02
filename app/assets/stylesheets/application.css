@@ -1,3 +1,78 @@
+/* Top Bar */
+#topBar{
+	padding: 0 20px;
+	height: 75px;
+	width: 80%;
+}
+#topBar a{
+	text-decoration: none;
+}
+#topBar ul{
+	margin-top: 20px;
+}
+#search{
+	float:right;
+}
+.navbar{
+	height: 75px;
+}
+
+
+
+
+
+/* Content */
+.content{
+	padding:0 20px;
+}
+.content a{
+	text-decoration: none;
+}
+
+.content li{
+	list-style: none;
+}
+.collectionModal{
+	float:left;
+	text-align: center;
+
+
+}
+.filterModal{
+	float: right;
+	text-align: center;
+}
+
+
+/* Design */
+#design{
+	margin:0px 10px;
+	padding: 10px 10px;
+	min-height: 200px;
+}
+.dropdownCollect{
+	width:100%;
+
+}
+.dropdownCollect button{
+	text-align: left;
+	padding: 5px 10px;
+	border:none;
+}
+.dropdownCollect span{
+	float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -13,4 +88,5 @@
  *
  *= require_self
  *= require_tree .
+ *= require bootstrap
  */

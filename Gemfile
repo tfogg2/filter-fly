@@ -10,7 +10,7 @@ gem 'shopify_app', '6.1.0'
 
 gem 'simple_form'
 
-ruby '2.2.4'
+ruby '2.3.1'
 
 
 # Use SCSS for stylesheets

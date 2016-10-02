@@ -2,7 +2,10 @@
 
 	<h3><%= @refinement.name %></h3>
 	<h3><%= @refinement.type %></h3>
+	<%# @refinement.where(type: "filter").count %>
 
 
 	<%= @refinement.tag %>
 	<% link_to 'Delete', @refinement, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+	<button class="btn btn-default btn-large"><%= link_to "All Refinements", refinements_path %></button>

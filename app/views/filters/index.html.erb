@@ -1,14 +1,27 @@
-<h1> Filters </h1>
 
-<button class="btn btn-default"><%= link_to "New Filter", new_filter_path %></button>
-<button class="btn btn-default"><%= link_to "Collections", collections_path %></button>
+<div id="filters">
+	<h1> Filters </h1>
+
+	<%= link_to  new_filter_path, remote: true  do %>
+		<button class="btn btn-default" data-toggle="modal" data-target="#myFilterModal"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+	<% end %>
+
+	<button class="btn btn-default"><%= link_to "Collections", collections_path %></button>
+	<button class="btn btn-default btn-large"><%= link_to "All Refinements", refinements_path %></button>
 
 
-<% @filters.each do |filter| %>
-	<h3><%= link_to filter.name, filter_path(filter)  %></h3>
-	<%# link_to 'Edit', edit_filter_path(filter) %>
-    <%= link_to 'Delete', filter, method: :delete, data: { confirm: 'Are you sure?' } %>
-<% end %>
+
+	
+
+	<% @filters.each do |filter| %>
+		<h3><%= link_to filter.name, filter_path(filter)  %></h3>
+		<%# link_to 'Edit', edit_filter_path(filter) %>
+	    <%= link_to 'Delete', filter, method: :delete, data: { confirm: 'Are you sure?' } %>
+	<% end %>
+</div>
+
+
+
 
 
 
