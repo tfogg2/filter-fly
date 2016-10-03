@@ -12,9 +12,6 @@ class CollectionsCreateJob < ActiveJob::Base
 			end
 		end
 	end
-	
-
-
 end
 
 

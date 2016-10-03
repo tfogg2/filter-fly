@@ -51,4 +51,4 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-gem 'shopify_app'
+gem 'shopify_app', '~> 6.1.3'

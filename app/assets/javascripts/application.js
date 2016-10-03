@@ -1,11 +1,4 @@
 
-  $(window).load(function(){
-    $.get('filters/new', function(data){
-    $('#newFilter').html(data)
-
-    });
-
-  }); 
 
     $('.filterModal').hide();
   $('.collectModal').hide();
@@ -23,9 +16,6 @@
     $('.filterModal').hide();
   });
 
-var $i = $('.collectFilter');
-$('.collectList').append($i)
-$i.attr("collection_id", collection.id)
 
 //$('#newModal').function(){
   //$(this).hide();
