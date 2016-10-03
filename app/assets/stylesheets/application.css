@@ -1,7 +1,10 @@
 /* Top Bar */
+.mainNav nav{
+	height: 90px;
+}
 #topBar{
-	padding: 0 20px;
-	height: 75px;
+	padding: 5px 20px;
+	height: 90px;
 	width: 80%;
 }
 #topBar a{
@@ -12,9 +15,6 @@
 }
 #search{
 	float:right;
-}
-.navbar{
-	height: 75px;
 }
 
 
