@@ -1,16 +1,15 @@
 source 'https://rubygems.org'
 
+ruby '>= 2.3.0'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.6'
+gem 'rails', '~> 4.2.6'
 
 # Use postgresql as the database for Active Record
 gem 'pg'
 
 
 gem 'simple_form'
-
-ruby '2.3.1'
-
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -51,4 +50,4 @@ end
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
-gem 'shopify_app', '~> 6.1.3'
+gem 'shopify_app', '7.2.0'

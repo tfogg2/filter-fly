@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20160917212242) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "refinements", force: true do |t|
+  create_table "refinements", force: :cascade do |t|
     t.string   "type"
     t.string   "tag"
     t.string   "name"
@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 20160917212242) do
     t.integer  "filter_id"
   end
 
-  create_table "shops", force: true do |t|
+  create_table "shops", force: :cascade do |t|
     t.string   "shopify_domain", null: false
     t.string   "shopify_token",  null: false
     t.datetime "created_at"
