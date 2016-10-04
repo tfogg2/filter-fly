@@ -24,6 +24,7 @@
 /* Content */
 .content{
 	padding:0 20px;
+	min-height: 600px;
 }
 .content a{
 	text-decoration: none;
@@ -43,7 +44,16 @@
 	text-align: center;
 }
 
+.content  button{
+	background-color: #7AB55C;
+	color: white;
 
+}
+
+#installation{
+	min-height: 600px;
+	background: #682067;
+}
 /* Design */
 #design{
 	margin:0px 10px;

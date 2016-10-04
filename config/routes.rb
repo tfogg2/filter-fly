@@ -11,6 +11,7 @@ Filterfly::Application.routes.draw do
   get 'design' => 'refinements#design', as: :design
   get 'installation' => 'support#installation', as: :installation
   get 'support' => 'support#support', as: :support
+  get 'home' => 'home#index', as: :fly
   
 
   resources :refinements 
