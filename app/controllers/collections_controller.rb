@@ -1,60 +1,53 @@
-class CollectionsController < ApplicationController
+class ProductsController < ApplicationController
 	def index 
-		@collections = Collection.all
-	end 
+		# All products for this collection
+		@collection = ShopifyAPI::Collection.find(params[:collection_id])
+		@products = @collection.products
 
-	def show 
-		@collection = Collection.find(params[:id])
-		@filters = Filter.where("collection_id = id" )
-=begin
-		@filters = Filter.where("collection_id = id" ).find_each do |filter|
-			filter.name
+		@modified_products = @products.select do |p| 
+			# Google, "rails array include value from other array" .any?
+			p[:tags].include?(params[:tag])
 		end
-=end
-	end 
-	def new 
-		@collection = Collection.new
-	end
-	def create
-		@collection = Collection.create (collection_params)
 
 		respond_to do |format|
-		  if @collection.save
-		    format.html { redirect_to @collection, notice: 'Collection was successfully created.' }
-		    format.json { render json: @collection, status: :created, location: @collection }
-		  else
-		    format.html { render action: "new" }
-		    format.json { render json: @collection.errors, status: :unprocessable_entity }
-		  end
+			format.json { render json:@modified_products.to_json }
 		end
-	end
-	def collection_params
-    	params.require(:collection).permit(:title, :tag) 
-  	end	
-
-  	def edit
-	    @collection = collection.find(params[:id])
-
-	    respond_to do |format|
-	      if @collection.update_attributes(collection_params) 
-
-	        format.html { redirect_to @collection, notice: 'Collection was successfully updated.' }
-	        format.json { head :no_content }
-	      else
-	        format.html { render action: 'edit' }
-	        format.json { render json: @collection.errors, status: :unprocessable_entity }
-	      end
-	   end
-  end
-
-  # DELETE /statuses/1
-  # DELETE /statuses/1.json
-  def destroy
-  	@collection = Collection.find(params[:id])
-    @collection.destroy
-	   respond_to do |format|
-	    format.html { redirect_to collections_path }
-	    format.json { head :no_content }
-	  end
-  end
+	end 
 end
+
+# /products?collection_id=1234&tag=beer
+# /products?collection_id=1234&tags[]=beer&tags[]=this
+
+# Left bar
+# - Lists all of the collections
+# -- Lists all of the tags under that (and maybe sub collections)
+
+# When a tag is clicked
+
+# var active_tags = [];
+
+# $(".ff-tag").on("click", function(){
+# 	var tag = $(this).data('tag');
+
+# 	# <a href="#" class= "ff-tag" data-tag="beer">Beer</a>
+# 	if(active_tags.indexOf(tag)){
+# 		# this is already being searched so.... remove it
+# 		# lookup javascript remove value from array
+# 		active_tags.pop(tag);
+# 	} else {
+# 		# This isn't being seached yet, add it!
+# 		active_tags.push(tag);
+# 	}
+
+# 	# Go get the new tags
+# 	getTags();
+# });
+
+# function getTags(){
+# 	$.get("/products", {
+# 		collection_id: "whatever the collection id is",
+# 		tags: active_tags
+# 	}, function(){
+# 		# Populate the right side with this shiny new content
+# 	})
+# }
