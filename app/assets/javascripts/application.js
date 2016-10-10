@@ -1,21 +1,6 @@
 
 
-    $('.filterModal').hide();
-  $('.collectModal').hide();
   
-  $('#myRefinementModal').hide();
-
-
-  $('.collectBtn').click(function(){
-    $('#myRefinementModal').show();
-    $('.collectModal').show();
-    
-  });
-  $('.filterBtn').click(function(){
-    $('#myRefinementModal').show();
-    $('.filterModal').hide();
-  });
-
 
 //$('#newModal').function(){
   //$(this).hide();

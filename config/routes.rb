@@ -1,6 +1,8 @@
 Filterfly::Application.routes.draw do
   
 
+ 
+  root :to => 'home#index'
   mount ShopifyApp::Engine, at: '/'
   controller :sessions do
     get 'login' => :new, :as => :login
@@ -8,16 +10,16 @@ Filterfly::Application.routes.draw do
     get 'auth/shopify/callback' => :callback
     get 'logout' => :destroy, :as => :logout
   end
-  root 'refinements#index'
-  get 'design' => 'refinements#design', as: :design
+  #root 'refinements#index'
+  #get 'design' => 'refinements#design', as: :design
   get 'installation' => 'support#installation', as: :installation
   get 'support' => 'support#support', as: :support
-  get 'home' => 'home#index', as: :fly
+  get 'home' => 'home#index', as: :home
   
 
-  resources :refinements 
-  resources :filters #, :controller => "refinements", :type => "Filter" 
-  resources :collections #, :controller => "refinements", :type => "Collection"  
+  #resources :refinements 
+  #resources :filters #, :controller => "refinements", :type => "Filter" 
+  #resources :collections #, :controller => "refinements", :type => "Collection"  
   
 
   

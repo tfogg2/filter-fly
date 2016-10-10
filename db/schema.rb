@@ -17,10 +17,10 @@ ActiveRecord::Schema.define(version: 20160917212242) do
   enable_extension "plpgsql"
 
   create_table "refinements", force: :cascade do |t|
-    t.string   "type"
-    t.string   "tag"
-    t.string   "name"
-    t.string   "title"
+    t.string   "type",          limit: 255
+    t.string   "tag",           limit: 255
+    t.string   "name",          limit: 255
+    t.string   "title",         limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "collection_id"
@@ -28,8 +28,8 @@ ActiveRecord::Schema.define(version: 20160917212242) do
   end
 
   create_table "shops", force: :cascade do |t|
-    t.string   "shopify_domain", null: false
-    t.string   "shopify_token",  null: false
+    t.string   "shopify_domain", limit: 255, null: false
+    t.string   "shopify_token",  limit: 255, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end
