@@ -6,6 +6,7 @@ ShopifyApp.configure do |config|
   config.embedded_app = true
 
   config.webhooks = [
+  	{topic: 'app/uninstall', address: 'http://localhost:3000/webhooks/app_uninstall', format: 'json'},
     {topic: 'collections/delete', address: 'http://localhost:3000/webhooks/collections_delete', format: 'json'},
     {topic: 'collections/update', address: 'http://localhost:3000/webhooks/collections_update', format: 'json'},
     {topic: 'collections/create', address: 'http://localhost:3000/webhooks/collections_create', format: 'json'},
