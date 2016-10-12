@@ -11,21 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160917212242) do
+ActiveRecord::Schema.define(version: 20161012010316) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
-
-  create_table "refinements", force: :cascade do |t|
-    t.string   "type",          limit: 255
-    t.string   "tag",           limit: 255
-    t.string   "name",          limit: 255
-    t.string   "title",         limit: 255
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "collection_id"
-    t.integer  "filter_id"
-  end
 
   create_table "shops", force: :cascade do |t|
     t.string   "shopify_domain", limit: 255, null: false

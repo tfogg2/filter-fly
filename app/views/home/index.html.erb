@@ -8,11 +8,21 @@
     });
   </script>
 <% end %>
+<div class="handles">
+  <h2>Handles</h2>
+  <ul>
 
-<h2>Products</h2>
-
-<ul>
-  <% @products.each do |product| %>
-    <li><%= link_to product.title, "https://#{@shop_session.url}/admin/products/#{product.id}", target: "_top" %></li>
-  <% end %>
-</ul>
+    <% @products.each do |product| %>
+      <li><%= link_to product.tags, "https://#{@shop_session.url}/admin/products/#{product.id}", target: "_top" %></li>
+    <% end %>
+  </ul>
+</div>
+<div class="products">
+  <h2>Products</h2>
+  <ul>
+    <% @products.each do |product| %>
+      <li><%= link_to product.title, "https://#{@shop_session.url}/admin/products/#{product.id}", target: "_top" %></li>
+      <li><%= link_to product.handle, "https://#{@shop_session.url}/admin/products/#{product.id}", target: "_top" %></li>
+    <% end %>
+  </ul>
+</div>
